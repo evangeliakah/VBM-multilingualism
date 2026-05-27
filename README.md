@@ -24,10 +24,13 @@ use balance (entropy) — in 51 healthy young adults from the NEBULA101 dataset
   - Only FDR-corrected finding across the full multimodal study
 - All other contrasts uncorrected only (p < 0.001 unc., k ≥ 10 voxels)
 
-## Files
-- `run_VBM_second_level.m` — Full MATLAB script: smoothing + GLM + contrasts in one run
-- `person_A_GM_results/` — PDFs of all 4 SPM results maps + brain rendering figures
-
+## Scripts
+- `person_a.m` — Main pipeline: loads design matrix, locates mwp1 GM maps, 
+   smooths (8mm FWHM), builds second-level GLM, estimates model, defines 4 contrasts
+- `main.m` — Brain rendering: resamples T-maps to MNI template space, 
+   generates axial slice figures with thresholded overlays, saves PDFs
+- See `methods_notes.txt` for manual CAT12 preprocessing steps done via SPM GUI
+  
 ## Data
 - Dataset: NEBULA101 (OpenNeuro ds005613, Pliatsikas et al. 2024)
 - N = 51 subjects (stratified subset preserving full nlang range)
