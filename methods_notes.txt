@@ -1,0 +1,8 @@
+CAT12 Preprocessing (manual, SPM GUI):
+- CAT12 batch run on all 51 T1w images via SPM25 GUI
+- Unified segmentation, MNI normalisation, modulated GM maps (mwp1)
+- Output: derivatives/CAT26.0.rc3_3250/sub-pp*/ses-01/anat/mwp1*.nii
+- QC: CAT12 report PDFs reviewed for each subject, all passed
+
+Smoothing + GLM (scripted):
+- See run_VBM_second_level.m for all steps from smoothing onwards
